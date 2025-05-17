@@ -15,22 +15,22 @@ export const router = createBrowserRouter([
         Component: Home,
       },
       {
-        path : '/addSchedule',
+        path: "/addSchedule",
         Component: AddSchedule,
       },
       {
-        path : '/allSchedule',
+        path: "/allSchedule",
+        loader: () => fetch("http://localhost:3000/schedule"),
         Component: AllSchedule,
       },
       {
-        path : '/login',
+        path: "/login",
         Component: Login,
       },
       {
-        path : '/register',
+        path: "/register",
         Component: Register,
       },
-
     ],
   },
 ]);

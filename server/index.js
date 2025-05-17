@@ -27,6 +27,10 @@ async function run() {
       const result = await gymCollection.insertOne(newSchedule);
       res.send(result);
     });
+    app.get("/schedule", async (req, res) => {
+      const result = await gymCollection.find().toArray();
+      res.send(result);
+    });
     console.log(
       "Pinged your deployment. You successfully connected to MongoDB!"
     );
